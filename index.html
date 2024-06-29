@@ -7,6 +7,70 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  
+  <div class="webpage-container">
+    <div class="webpage-section-one">
+      <div class="logo-cont">
+        <img class="odin-img" src="./odin-lined.png" alt="the odin project lined logo">
+        <div class="odin-text">Odin</div>
+      </div>
+      <div class="credit-cont">
+        <div class="credit-text">Photo by <a class="credit-link" href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a class="link" href="https://unsplash.com/">Unsplash</a></div>
+      </div>
+    </div>
+    <div class="webpage-section-two">
+      <div class="subsection-one">
+        <div class="subsection-one-header-text-cont">
+          <div class="header-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</div>
+          <div class="header-text">You <em>know</em> you want to.</div>
+        </div>
+      </div>
+      <div class="subsection-two">
+        <div class="subsection-two-header-text-cont">
+          <div class="header-text">Let's do this!</div>
+        </div>
+        <div class="form-cont">
+          <form class="form" action="#" id="form">
+            <div class="form-column-one">
+              <div class="form-control">
+                <label class="label" for="name">First name</label>
+                <input class="input" type="text" id="name" name="name" maxlength="20" placeholder="Thor" required>
+              </div>
+              <div class="form-control">
+                <label class="label" for="email">Email</label>
+                <input class="input" type="email" id="email" name="email" placeholder="name@example.com" required>
+              </div>
+              <div class="form-control">
+                <label class="label" for="passowrd">Password</label>
+                <input class="input" type="password" id="password" name="passowrd" minlength="6" maxlength="20" placeholder="Must have at least 6 characters" required>
+              </div>
+            </div>
+            <div class="form-column-two">
+              <div class="form-control">
+                <label class="label" for="last">Last name</label>
+                <input class="input" type="text" id="last" name="last" maxlength="20" placeholder="Odinson" required>
+              </div>
+              <div class="form-control">
+                <label class="label" for="tel">Phone number</label>
+                <input class="input" type="tel" id="tel" name="tel" maxlength="20" placeholder="111-222-333" pattern="\d{3,3}-\d{3,3}-\d{3,3}" required>
+              </div>
+              
+              <div class="form-control">
+                <label class="label" for="password-confirm">Confirm passoword</label>
+                <input class="input" type="password" id="password-confirm" name="password-confirm" minlength="6" maxlength="20" placeholder="Confirm password" required>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="subsection-three">
+        <div class="btn-cont">
+          <button type="submit" form="form" class="submit-btn">Create Account</button>
+        </div>
+        <div class="text-cont">
+          <div class="account-question-text">Already have an account? <a class="account-question-link" href="#">Log in</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
