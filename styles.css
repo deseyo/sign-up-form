@@ -1,0 +1,224 @@
+@font-face {
+  font-family: norse;
+  src: url(./norse-bold.otf) format("opentype");
+}
+:root {
+  --font-size-regular: clamp(0.50rem, 0.75rem + 0.30vw, 1rem);
+  --font-size-input: clamp(0.75rem , 0.50rem + 0.50vw, 1rem);
+  --font-size-label: 0.75rem;
+  --font-size-header: clamp(1.1rem, 0.75rem + 0.60vw, 1.5rem);
+  --font-size-button: 1rem;
+  --font-size-logo: 5rem;
+  --font-size-credit: 0.75rem;
+  --font-family-odin: norse, sans-serif;
+  --font-family-regular: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-color-regular: rgb(46, 46, 46);
+  --font-color-label: rgb(104, 104, 104);
+  --font-color-button: rgb(249, 249, 249);
+  --font-color-credit: rgb(190, 190, 190);
+  --font-weight-bold: 600;
+  --line-height: 1.3;
+
+  --background-color-subsection-darker: #f8f8f8;
+  --background-color-subsection-lighter: #ffffff;
+  --background-color-button: #596D48;
+  --border-color-input-default: rgb(229, 231, 235);
+  --border-color-input-focus: rgb(16, 107, 255);
+  --border-color-input-invalid: rgb(228, 38, 38);
+  --box-shadow-color: rgb(209, 209, 209);
+
+  --height-subsection-small: 27%;
+  --height-subsection-medium: 37%;
+  --height-subsection-large: 36%;
+
+  font-family: var(--font-family-regular);
+  line-height: var(--line-height);
+  color: var(--font-color-regular);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.webpage-container {
+  display: flex;
+  height: 100vh;
+}
+
+.webpage-section-one {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding: 200px 0 15px 0;
+  background: url("./background.jpg") center;
+}
+
+.webpage-section-two {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.subsection-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: var(--height-subsection-large);
+  padding: 0 200px 50px 50px; 
+}
+
+.subsection-two {
+  height: var(--height-subsection-medium);
+  padding: 15px 300px 40px 50px;
+  margin-bottom: 35px;
+  box-shadow: 0px 14px 10px -10px var(--box-shadow-color);
+  background-color: var(--background-color-subsection-lighter);
+
+}
+
+.subsection-three {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: var(--height-subsection-small);
+  padding: 0 0 0 50px;
+}
+
+.webpage-section-two,
+.subsection-one,
+.subsection-three {
+  background-color: var(--background-color-subsection-darker);
+}
+
+.logo-cont {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 10px 0;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.odin-img {
+  width: 100px;
+  height: auto;
+}
+
+.odin-text {
+  font-size: var(--font-size-logo);
+  color: var(--font-color-button);
+  font-family: var(--font-family-odin);
+}
+
+.credit-cont {
+  margin-top: auto;
+  text-align: center;
+}
+
+.credit-text {
+  font-size: var(--font-size-credit);
+  color: var(--font-color-credit);
+}
+
+.credit-link {
+  text-decoration: underline;
+  color: var(--font-color-credit);
+}
+
+.subsection-one-header-text-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-text {
+  font-size: var(--font-size-header);
+  font-weight: var(--font-weight-bold);
+}
+
+.subsection-two-header-text-cont {
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  gap: 80px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.form-column-one,
+.form-column-two {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.label {
+  margin-bottom: 3px;
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--font-color-label);
+  text-transform: uppercase;
+}
+
+.input {
+  outline: none;
+  border: 1px solid var(--border-color-input-default);  
+  border-radius: 5px;
+  font-size: var(--font-size-input);
+  padding: 6px 10px;
+}
+
+.input:focus {
+  border: 1px solid var(--border-color-input-focus);
+}
+
+#password:invalid,
+#password-confirm:invalid {
+  border: 1px solid var(--border-color-input-invalid);
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  width: 220px;
+  height: 30px;
+  padding: 25px 0;
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: 6px;
+  color: var(--font-color-button);
+  background-color: var(--background-color-button);
+
+}
+
+.account-question-text {
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-bold);
+}
+
+.account-question-link {
+  text-decoration: none;
+  color: var(--background-color-button);
+}
+
+
+
+
+
+
+
+
