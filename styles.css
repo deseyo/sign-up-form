@@ -24,7 +24,6 @@
   --background-color-button: #596D48;
   --border-color-input-default: rgb(229, 231, 235);
   --border-color-input-focus: rgb(16, 107, 255);
-  --border-color-input-invalid: rgb(228, 38, 38);
   --box-shadow-color: rgb(209, 209, 209);
 
   --height-subsection-small: 27%;
@@ -181,11 +180,6 @@ body {
 
 .input:focus {
   border: 1px solid var(--border-color-input-focus);
-}
-
-#password:invalid,
-#password-confirm:invalid {
-  border: 1px solid var(--border-color-input-invalid);
 }
 
 .submit-btn {
